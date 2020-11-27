@@ -22,10 +22,5 @@ int main() {
     nodes.push_back(Node(4, 5, 4));
     nodes.push_back(Node(5, 6, 1));
 
-    for(int i = 0; i < 5; i++) printf("%d %d %d\n", nodes[i].from, nodes[i].to, nodes[i].cost);
-    // 1 2 5
-    // 2 3 3
-    // 3 4 2
-    // 4 5 4
-    // 5 6 1
+    for(int i = 0; i < 5; i++) printf("%d %d %d\n", nodes[i].from, nodes[i].to, nodes[i].cost);    
 }
