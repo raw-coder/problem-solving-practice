@@ -75,6 +75,13 @@ union find
 topological sort
 
 [day7]
-교육P-0026 최저 공통 조상
+교육P-0026 최저 공통 조상 (필수) - LCA
+
+기출A-0037 핵심도시1 - 단절점
+연습P-0027 MST - LCA, MST
+기출P-0051 조상이 키컸으면 - LCA
+
+lca
+단절점
 
 
