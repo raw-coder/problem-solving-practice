@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 #define N 4196 // 2 ^ 12
-#define M 100100123
+#define M 100000123
 
 long long c[N][N], ans[12];
 int T, x;
