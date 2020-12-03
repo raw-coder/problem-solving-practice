@@ -23,7 +23,6 @@ struct Edge {
 };
 
 priority_queue<Node> pq;
-priority_queue<int> result;
 vector<Edge> edges[SIZE + 1];
 Node nodes[SIZE + 1];
 int visited[SIZE + 1];
@@ -33,12 +32,14 @@ void dijkstra() {
         Node current = pq.top(); pq.pop();
         visited[current.n]++;
 
-        if(visited[current.n] > K) continue;
+        if(visited[current.n] >= K) continue;
         if(current.n == N && visited[current.n] == K) break;
         
-        for(Edge e : edges[current.n]) {            
-            nodes[e.to].d = current.d + e.d;
-            pq.push(Node(e.to, current.d + e.d));
+        for(Edge e : edges[current.n]) {
+            if(visited[e.to] < K) {
+                nodes[e.to].d = current.d + e.d;
+                pq.push(Node(e.to, current.d + e.d));    
+            }
         }
     }
 }
@@ -49,7 +50,6 @@ void init() {
         nodes[i] = Node(i, 0);
         visited[i] = 0;
     }
-    while(!result.empty()) result.pop();
 }
 
 int main() {
