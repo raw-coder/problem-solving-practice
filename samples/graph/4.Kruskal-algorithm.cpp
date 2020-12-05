@@ -35,7 +35,7 @@ void init() {
 }
 
 int kruskal() {
-    sort(edges.begin(), edges.end());
+    sort(edges.begin(), edges.end()); // 내림차순 정렬
 
     int selected = 0;
     int sum = 0;
@@ -44,6 +44,7 @@ int kruskal() {
         if(find(e.from) == find(e.to)) continue;
         _union(e.from, e.to);
         sum += e.w;
+        selected++;
         printf("%d %d\n", e.from, e.to);
         if(selected == N) break;
     }
