@@ -16,3 +16,4 @@ int main() {
     for(int i = 0; i < N; i++) printf("%d ", visited[i]); // 0 0 0 0 0 0 0 0 0 0
 
     return 0;
+}

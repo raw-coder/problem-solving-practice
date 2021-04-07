@@ -3,7 +3,6 @@
 
 int parent[N + 1];
 
-
 int find(int a) {
     if(parent[a] == a) return a;
     return parent[a] = find(parent[a]);
