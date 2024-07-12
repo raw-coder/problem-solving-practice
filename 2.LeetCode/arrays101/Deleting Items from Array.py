@@ -10,9 +10,7 @@ class Solution:
                 for j in range(i, end - 1):
                     nums[j] = nums[j + 1]
                 end -= 1
-                print(i, "changed", nums)
             else:
-                print(i, "unchanged", nums)
                 k += 1
                 i += 1
         return k
